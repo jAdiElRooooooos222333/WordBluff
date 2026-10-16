@@ -74,12 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // making the div inside the js file
     const card = document.createElement("div");
     card.className = "flip-card";
+    card.addEventListener("click", () => {
+      card.classList.toggle("is-flipped");
+    });
 
     // text on the back of the card, can't see unless its flipped
     // $ Lets you mix Strings w/ variables
     // === (Strictly Equal)
     const backText = i === imposterIndex
-      ? `<h3>IMPOSTER</h3><p>No word</p>`
+      ? `<h3>IMPOSTER</h3><p></p>`
       : `<h3>${pickedWord}</h3>`;
 
     // makes divs for front of card elements

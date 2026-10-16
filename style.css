@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(135deg, #262936, #29123f, #b59aff, #2200ff);
     color: white;
 }
 
@@ -19,7 +19,7 @@ h2, h3 {
 .container {
     width: 400px;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgb(88, 66, 128);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     display: flex;
@@ -39,17 +39,17 @@ h2, h3 {
     padding: 12px 24px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(135deg, #00e5ff, #0072ff);
+    background: linear-gradient(135deg, #00f7ff, #ff3cac, #7a5cff);
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+    box-shadow: 0 5px 20px rgba(255, 60, 172, 0.55);
 }
 
 .buttons button:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 229, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.9);
 }
 
 #cardsContainer {
@@ -68,6 +68,7 @@ h2, h3 {
     height: 200px;
     perspective: 1000px;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 /* CARD INNER */
@@ -80,7 +81,7 @@ h2, h3 {
 }
 
 /* FLIP */
-.flip-card:hover .flip-card-inner {
+.flip-card.is-flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -110,22 +111,22 @@ h2, h3 {
 
 /* FRONT */
 .flip-card-front {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #00f7ff, #2b6bff, #5a2cff);
+    border: 2px solid rgba(255, 255, 255, 0.4);
     color: white;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* BACK */
 .flip-card-back {
-    background: linear-gradient(135deg, #ff00cc, #3333ff);
+    background: linear-gradient(135deg, #ff1ebc, #ff7a18, #6f5bff);
     color: white;
     transform: rotateY(180deg);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* GLOW */
-.flip-card:hover {
-    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.5));
+.flip-card.is-flipped {
+    filter: drop-shadow(0 0 20px rgba(0, 247, 255, 0.9));
 }
